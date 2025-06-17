@@ -101,7 +101,7 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .hero-content h1 {
@@ -247,8 +247,9 @@ img {
 
 /* Membuat teks copyright lebih kecil */
 .copyright-text {
-  margin: 0; /* Menghapus margin default dari paragraf */
-  font-size: 0.8rem; /* Font lebih kecil dari sebelumnya (0.9rem) */
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif; /* <-- MENERAPKAN FONT BARU */
 }
 
 /* Memberi gaya pada tulisan TOBATENUN di kanan */
