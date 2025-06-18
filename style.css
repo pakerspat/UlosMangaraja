@@ -353,3 +353,118 @@ img {
 .cta-bottom {
   margin-top: 60px; /* Jarak dari grid nilai ke tombol */
 }
+/* ======================================= */
+/* === Styling untuk Navigasi Mobile   === */
+/* ======================================= */
+
+.mobile-nav-container {
+  /* Sembunyikan container secara default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200; /* Harus di atas semua elemen lain */
+  visibility: hidden; /* Kontrol visibilitas untuk transisi */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Latar belakang gelap transparan */
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -280px; /* Sembunyikan di luar layar sebelah kanan */
+  width: 280px;
+  height: 100%;
+  background-color: #1a1a1a; /* Warna latar menu sama seperti header */
+  box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animasi slide-in */
+}
+
+/* === Style untuk state AKTIF === */
+.mobile-nav-container.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-nav-container.active .mobile-nav {
+  right: 0; /* Pindahkan menu ke dalam layar saat aktif */
+}
+/* Mencegah body scroll saat menu terbuka */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* === Styling di dalam Menu Mobile === */
+
+.mobile-nav .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px; /* Jarak dari atas */
+}
+
+.mobile-nav ul li {
+  border-bottom: 1px solid #333; /* Garis pemisah antar menu */
+}
+
+.mobile-nav ul li a {
+  display: block;
+  padding: 18px 25px; /* Memberi padding 25px di kiri dan kanan */
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s; /* Tambahkan transisi untuk warna teks */
+}
+
+.mobile-nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: #121212;
+}
+/* ======================================= */
+/* === Styling untuk Ikon Sosial Media === */
+/* ======================================= */
+
+.social-icons {
+  display: flex; /* Membuat ikon sejajar secara horizontal */
+  align-items: center;
+  gap: 20px; /* Memberi jarak antar ikon */
+}
+
+.social-icons a {
+  color: #a0a0a0; /* Warna default ikon, sama seperti link footer lain */
+  display: inline-block;
+  transition: color 0.3s ease; /* Transisi halus untuk warna */
+}
+
+/* Memberi gaya pada ikon SVG di dalamnya */
+.social-icons a svg {
+  display: block; /* Menghilangkan spasi ekstra di bawah ikon */
+}
+
+/* Efek saat mouse menyentuh ikon */
+.social-icons a:hover {
+  color: var(
+    --primary-color
+  ); /* Mengubah warna ikon menjadi warna aksen (emas/krem) */
+}
