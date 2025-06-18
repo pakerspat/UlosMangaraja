@@ -98,8 +98,7 @@ img {
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://via.placeholder.com/1500x700.png?text=Latar+Belakang+Tenun")
-      no-repeat center center/cover;
+    url(Gambar/home.png) no-repeat center center/cover fixed;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -626,4 +625,81 @@ body.no-scroll {
 /* Memberi jarak pada section konten */
 .content-section {
   padding: 80px 0;
+}
+
+/* ======================================= */
+/* === Gaya untuk Halaman Hubungi Kami === */
+/* ======================================= */
+
+.hero-kontak {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://via.placeholder.com/1500x500.png?text=Kontak+Latar") no-repeat
+      center center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-kontak h1 {
+  font-size: 3.5rem;
+}
+
+.contact-section {
+  padding: 80px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* 2 kolom dengan lebar berbeda */
+  gap: 50px;
+}
+
+.contact-details h3,
+.contact-form h3 {
+  margin-top: 0;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-details li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--font-sans);
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  align-self: flex-start; /* Tombol tidak full-width */
+  border: none;
+  cursor: pointer;
+}
+
+.map-section iframe {
+  display: block; /* Menghilangkan spasi bawah pada iframe */
+}
+
+/* Penyesuaian untuk layar kecil */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Ubah menjadi 1 kolom */
+  }
 }
