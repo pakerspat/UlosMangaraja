@@ -8,6 +8,10 @@
   --font-sans: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   margin: 0;
@@ -262,6 +266,12 @@ img {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* ▼▼ TAMBAHKAN KODE DI BAWAH INI ▼▼ */
+  html {
+    font-size: 15px;
+  }
+  /* ▲▲ BATAS KODE TAMBAHAN ▲▲ */
+
   .main-nav {
     display: none;
   } /* Sembunyikan nav desktop */
@@ -284,6 +294,12 @@ img {
 }
 
 @media (max-width: 480px) {
+  /* ▼▼ TAMBAHKAN KODE DI BAWAH INI ▼▼ */
+  html {
+    font-size: 14px;
+  }
+  /* ▲▲ BATAS KODE TAMBAHAN ▲▲ */
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
