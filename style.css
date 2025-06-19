@@ -12,11 +12,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* KODE BARU DENGAN ANIMASI */
 body {
   font-family: var(--font-sans);
   margin: 0;
   color: var(--text-color);
   background-color: var(--bg-color);
+  /* Tambahkan baris ini untuk menjalankan animasi */
+  animation: fadeInAnimation 0.5s ease-in-out forwards;
 }
 
 .container {
@@ -376,6 +379,19 @@ img {
 /* Memberi jarak pada bagian grid produk */
 .all-products {
   padding: 80px 0;
+}
+/* ======================================= */
+/* === Animasi Transisi Halaman (Fade-In) === */
+/* ======================================= */
+@keyframes fadeInAnimation {
+  /* Mulai dari transparan penuh */
+  from {
+    opacity: 0;
+  }
+  /* Berakhir dengan terlihat penuh */
+  to {
+    opacity: 1;
+  }
 }
 /* Responsive Design */
 @media (max-width: 768px) {
